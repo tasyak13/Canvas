@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <canvas width="1000px" height="1000px" id='square'>
+
+    </canvas>
+
+    <script>
+        const canvas = document.getElementById("square");
+        const context = canvas.getContext('2d');
+        let x = 0;
+        let y = 0;
+        let w = 500;
+        let h = 500;
+        for(let i = 0; i < 4; i++) {
+            context.strokeStyle = '#FF0000';
+            context.strokeRect(x, y, w, h);
+            x = x + 5;
+            y = y + 5;
+            w = w - 10;
+            h = h - 10;
+        }
+    </script>
+</body>
+</html>
